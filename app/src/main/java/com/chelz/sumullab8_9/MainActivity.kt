@@ -29,5 +29,13 @@ class MainActivity : AppCompatActivity() {
 			intent = Intent(this, Lab91Activity::class.java)
 			startActivity(intent)
 		}
+		binding.lab10.setOnClickListener {
+			intent = Intent(this, Lab10Activity::class.java)
+			startActivity(intent)
+		}
+		binding.lab11.setOnClickListener {
+			intent = Intent(this, Lab11Activity::class.java)
+			startActivity(intent)
+		}
 	}
 }

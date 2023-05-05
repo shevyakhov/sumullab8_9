@@ -6,47 +6,158 @@
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-	<TextView
-		android:layout_width="wrap_content"
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Lprob1"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="LAB 8-9"
-		android:textSize="30sp"
-		android:textStyle="bold"
-		app:layout_constraintBottom_toTopOf="@id/lab_8_1"
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent">
 
-	<Button
-		android:id="@+id/lab_8_1"
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/prob1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Lprob2"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="20dp"
-		android:text="8.1"
-		app:layout_constraintBottom_toTopOf="@id/lab_8_2" />
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/Lprob1">
 
-	<Button
-		android:id="@+id/lab_8_2"
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/prob2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Lprob3"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="20dp"
-		android:text="8.2"
-		app:layout_constraintBottom_toTopOf="@id/lab_8_3" />
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
 
-	<Button
-		android:id="@+id/lab_8_3"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/Lprob2">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/prob3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Lprob4"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="20dp"
-		android:text="8.3"
-		app:layout_constraintBottom_toTopOf="@id/lab_9_1" />
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
 
-	<Button
-		android:id="@+id/lab_9_1"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/Lprob3">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/prob4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Lprob5"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="20dp"
-		android:text="9.1"
-		app:layout_constraintBottom_toBottomOf="parent" />
+		android:layout_marginTop="5dp"
+		android:background="@color/white"
 
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/Lprob4">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/prob5"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:clickable="false"
+			android:focusable="false"
+			android:inputType="number|numberDecimal"
+			android:text="auto"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.github.mikephil.charting.charts.BarChart
+		android:id="@+id/chart"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_margin="5dp"
+		app:layout_constraintBottom_toTopOf="@id/chi"
+		app:layout_constraintTop_toBottomOf="@id/Lprob5" />
+
+	<TextView
+		android:id="@+id/chi"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/chart" />
+
+	<TextView
+		android:id="@+id/variance"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/chi" />
+
+	<TextView
+		android:id="@+id/average"
+		android:layout_width="match_parent"
+		android:layout_marginBottom="20dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toTopOf="@id/button"
+		app:layout_constraintTop_toBottomOf="@id/variance" />
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/Ltrial"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:background="@color/white"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/button">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/trial"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="trials"
+			android:inputType="number|numberDecimal"
+			android:textSize="12sp" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<Button
+		android:id="@+id/button"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:text="predict"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/Ltrial"
+		app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
